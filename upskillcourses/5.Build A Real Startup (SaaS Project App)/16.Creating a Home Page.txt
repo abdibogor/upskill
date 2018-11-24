@@ -1,0 +1,53 @@
+bash Ubuntu
+
+1. cd saasapp
+2. (pages_and_layout) $ touch public/index.html
+
+We'll learn how to add pages properly - the Rails way.
+
+To do so, we add code in a view file, controller file, and the routes file.
+
+###Terminal
+
+
+(From your application directory, type...)
+
+touch app/controllers/pages_controller.rb
+
+###app/controllers/pages_controller.rb
+
+class PagesController < ApplicationController
+    
+		def home
+    
+	end
+
+end
+
+###Terminal
+
+
+mkdir app/views/pages
+
+touch app/views/pages/home.html.erb
+
+###app/views/pages/home.html.erb
+
+
+<h2>Home Page</h2>
+
+###config/routes.rb
+
+
+root to: 'pages#home'
+
+###Terminal
+
+
+git add .
+
+git status
+
+git commit -m "Added a home view, controller action, route"
+
+git push origin pages_and_layout

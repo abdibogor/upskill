@@ -1,0 +1,30 @@
+We'll learn an important terminal command called rails routes.
+
+We'll use prefixes instead of hard-coding our links so that our site can scale without breaking as easily, as our pages change over time.
+
+###Terminal
+
+
+rails routes
+
+(Before Rails 5, you had to use...)
+
+rake routes
+
+###app/views/layouts/application.html.erb
+
+
+...
+
+<%= link_to root_path, class: "navbar-brand" do %>
+
+...
+
+<li><%= link_to "About", about_path %></li>
+
+###Terminal
+
+git status
+git add .
+git commit -m "Updated links to use prefixes"
+git push origin pages_and_layout

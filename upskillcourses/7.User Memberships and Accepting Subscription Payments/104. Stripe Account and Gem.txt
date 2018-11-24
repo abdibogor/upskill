@@ -1,0 +1,21 @@
+Here, we setup a free account with Stripe and set up our membership plans.
+
+Then, we install the Stripe gem which makes integration easy with Rails.
+
+
+###Gemfile
+
+
+...
+
+# Use Stripe for payment processing
+
+gem 'stripe', '1.48.0'
+
+...
+
+
+###Terminal
+
+
+bundle install

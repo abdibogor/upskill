@@ -1,0 +1,2 @@
+it is explaining before tutorial
+rails from helpers

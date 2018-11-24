@@ -1,0 +1,60 @@
+write in search engine 
+"font awesome"
+
+https://github.com/FortAwesome/font-awesome-sass
+
+font awesome cheatsheet
+
+Let's add a logo to our website. Instead of designing one from scratch, we can simply use Font Awesome.
+
+We'll import it using a gem.
+
+###Gemfile
+
+
+...
+
+# Use Font Awesome sass gem for adding icons
+
+gem 'font-awesome-sass', 
+'4.6.2'
+
+...
+
+###Terminal
+
+
+(From the Rails app folder...)
+
+bundle install
+
+###app/assets/stylesheets/application.css.scss
+
+
+...
+
+@import "font-awesome-sprockets";
+
+@import "font-awesome";
+
+...
+
+###app/views/layouts/application.html.erb
+
+
+...
+
+<a href="/" class="navbar-brand"><i class="fa fa-group"></i> DevMatch</a>
+
+...
+
+###Terminal
+
+
+git status
+
+git add .
+
+git commit -m "Added font awesome gem"
+
+git push origin pages_and_layout

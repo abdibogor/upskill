@@ -1,0 +1,7 @@
+cd saasapp/
+(master) git remote add origin git@github.com:upskillCourses/upskill_saas_tutorial.git
+(master) git remote
+(master) git remote -v
+origin git@github.com:upskillCourses/upskill_saas_tutorial.git
+origin git@github.com:upskillCourses/upskill_saas_tutorial.git(push)
+(master) git push origin master

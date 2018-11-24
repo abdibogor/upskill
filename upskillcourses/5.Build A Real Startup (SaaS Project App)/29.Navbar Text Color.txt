@@ -1,0 +1,47 @@
+We'll fix the navbar text colors, by overriding Bootstrap's defaults.
+
+We'll also learn about CSS specificity and special selectors.
+
+
+###app/assets/stylesheets/application.css.scss
+...
+.
+navbar-default .navbar-brand {
+ 
+ color: white;
+
+}
+
+.navbar-default .navbar-nav > li > a {
+  
+color: white;
+
+}
+
+.navbar-default .navbar-brand:hover {
+ 
+ color: white;
+  
+opacity: 0.75;
+
+}
+
+.navbar-default .navbar-nav > li > a:hover {
+  
+color: white;
+  
+opacity: 0.75;
+}
+
+...
+
+###Terminal
+
+
+git status
+
+git add .
+
+git commit -m "Updated navbar styles"
+
+git push origin pages_and_layout

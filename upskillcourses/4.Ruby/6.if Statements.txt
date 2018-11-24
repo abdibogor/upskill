@@ -1,0 +1,23 @@
+users = 100
+
+if (users > 50) 
+   puts "Hey, we've hit 50 users!"
+  elseif users == 50
+	 puts "We have 50 users"
+ else
+	puts "Haven't hit 50 yet..."
+
+end
+
+clear this code
+
+unless users >= 100
+	puts "We haven't hit 100 users yet."
+end
+
+user_signed_in = true
+paying_user = true
+
+puts user_signed_in && paying_user ? "Welcome to Netflix" : "Sign Up"
+
+ruby practive.rb

@@ -1,0 +1,24 @@
+Validations are useful for controlling or limiting what gets saved from a form to a database.
+We'll add validations to ensure each form field has input.
+
+###app/models/contact.rb
+
+
+class Contact < ActiveRecord::Base
+  
+validates :name, presence: true
+ 
+ validates :email, presence: true
+  
+validates :comments, presence: true
+
+end
+
+###Terminal
+
+
+git add .
+
+git commit -m "Added form validations to model"
+
+git push origin contact_form

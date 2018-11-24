@@ -1,0 +1,60 @@
+We'll create a database table to store our two membership plan offerings.
+
+This will be handy later when determining whether users are registered one plan versus another.
+
+
+###Terminal
+
+
+rails generate migration CreatePlans
+
+###db/migrate/20160929183332_create_plans.rb
+
+
+...
+
+t.string :name
+
+t.decimal :price
+
+t.timestamps
+
+...
+
+###Terminal
+
+
+rails db:drop
+
+rails db:migrate
+
+touch app/models/plan.rb
+
+###app/models/plan.rb
+
+
+class Plan < ActiveRecord::Base
+
+end
+
+###db/seeds.rb
+
+
+Plan.create(name: 'basic', price: 0)
+
+Plan.create(name: 'pro', price: 10)
+
+
+###Terminal
+
+
+rails db:seed
+
+git add .
+
+git commit -m "Added plans table"
+
+git push origin user_memberships
+
+
+

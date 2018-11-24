@@ -1,0 +1,19 @@
+Now we can build user profiles for our users.
+
+As programmers, we need to think of profiles as objects - just lists of information related to a user profile.
+
+To save these objects, we need to migrate our database so it has a new profiles table.
+
+
+###Terminal
+git checkout -b user_profiles
+
+rails g migration CreateProfiles
+
+rails db:migrate
+
+git add .
+
+git commit -m "Added profiles table"
+
+git push origin user_profiles

@@ -1,0 +1,9 @@
+in bottom 
+cd saasapp/
+touch requirements.txt
+
+in top
+* User should see link for basic plan on home page *
+* User should see link for Pro plan on home page *
+* Basic plan link should point to regular *
+* Pro plan link should point to a custom sign up form *

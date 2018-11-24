@@ -1,0 +1,7 @@
+1. rails generate scaffod Post title: string body:text  (enter)
+it created some files
+
+2. rake db:migrate
+
+3. rails s -b $IP -p $PORT
+

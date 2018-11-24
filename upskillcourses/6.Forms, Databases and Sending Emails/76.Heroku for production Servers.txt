@@ -1,0 +1,17 @@
+heroku command Line
+heroku.com
+
+Sending out emails from development environments with Rails is not common by default.
+
+Thus, it is a good time to set up a production server. By setting up a free Heroku account, we will have a real, live version of our site hosted on professional-grade servers.
+
+###Terminal
+heroku --version
+
+heroku login
+
+(Enter your login credentials)
+
+heroku keys:add
+
+heroku create

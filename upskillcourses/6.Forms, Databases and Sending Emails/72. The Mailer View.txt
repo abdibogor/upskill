@@ -1,0 +1,39 @@
+We need an actual HTML email template to send when our contact form is submitted.
+
+The way we do this in Rails is by creating a corresponding HTML view for the contact_email function that we wrote earlier.
+
+###Terminal
+
+
+mkdir app/views/contact_mailer
+
+touch app/views/contact_mailer/contact_email.html.erb
+
+###app/views/contact_mailer/contact_email.html.erb
+<!DOCTYPE html>
+
+<html>
+  <
+head></head>
+  
+<body>
+    
+<p>You have received a message from the site's contact form, from
+    <%= "#{ @name }, #{ @email }." %></p>
+    
+<p><%= @body %></p>
+  
+</body>
+
+</html>
+
+###Terminal
+
+
+git status
+
+git add .
+
+git commit -m "Added contact form mailer view"
+
+git push origin contact_form

@@ -1,0 +1,35 @@
+When our forms are submitted, we should record into our Users database table whether the customer is setting up a Basic account or Pro account.
+We can do this by inserting the Plan ID inside both sign up forms using hidden fields.
+Now, every user record (i.e. user object) will have a membership plan associated.
+
+###app/views/devise/registrations/_basic_form.html.erb
+
+
+...
+
+<%= hidden_field_tag 'plan', params[:plan] %>
+
+...
+
+###app/views/devise/registrations/_pro_form.html.erb
+
+
+...
+
+<%= hidden_field_tag 'plan', params[:plan] %>
+
+...
+
+###app/views/devise/registrations/new.html.erb
+
+
+...
+
+<div class="col-md-6 col-md-offset-3">
+
+...
+
+###Terminal
+git add .
+git commit -m "Added plan id as hidden fields to signup forms"
+git push origin user_memberships

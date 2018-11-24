@@ -1,0 +1,26 @@
+player_scores = [ 50, 100, 30, 60 ]
+
+player_scores.each do |score|
+	if score > 50
+	puts "Player score: #{x}"
+     end
+end
+
+player_scores = [ 50, 100, 30, 60 ]
+
+upgraded_player_scores = player_scores.map { |x| x + 10 }
+
+print player_scores
+print "\n"
+
+print upgraded_player_scores
+print "\n"
+
+player_scores = [ 50, 100, 30, 60 ]
+
+hash_of_players = { players1: "DarthVader", player2: "LukeSkywalker" }
+
+hash_of_players.each do |k, v|
+	puts "#{k}: #{v}:"
+
+end 

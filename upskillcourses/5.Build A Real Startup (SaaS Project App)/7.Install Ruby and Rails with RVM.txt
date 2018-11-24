@@ -1,0 +1,32 @@
+1.Our Cloud9 virtual computer comes preinstalled with RVM, a program that helps us manage exactly which version of Ruby and Rails we'll use.
+2.Ensuring you have the same version of Ruby and Rails as the videos is key to making sure your app behaves exactly like the app in this course.
+
+###Terminal
+
+cd
+cd workspace
+rvm install 2.3.0
+rvm --default use 2.3.0
+rvm gemset list
+rvm gemset create saasapp
+rvm gemset list
+rails -v
+rvm --default use ruby-2.3.0@saasapp
+gem install rails -v 5.0.0 --no-ri --no-rdoc
+ruby -v
+rails -v
+rvm --default use ruby-2.3.0@saasapp
+rails new saasapp
+cd saasapp
+touch .rvmrc
+c9 .rvmrc
+
+###.rvmrc
+rvm use 2.3.0@saasapp
+
+###Terminal
+cd ..
+cd saasapp
+y
+rvm rvmrc to .ruby-version
+rm .rvmrc

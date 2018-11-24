@@ -1,0 +1,22 @@
+write in top
+puts 2 + 2
+puts 4 - 2
+puts 5 * 5
+puts 20 / 10
+
+(write in bottom)
+ruby pratice.rb
+
+
+puts.Math.sqrt(4)
+ruby pratice.rb
+
+puts "Hello, my name is" + "Rob"
+ruby pratice.rb
+
+puts "String " + "concentation"
+ruby pratice.rb
+
+
+
+

@@ -1,0 +1,24 @@
+We check to see what routes we've defined by running rails routes.
+A route is a fancy way of saying which pages in the URL, a customer can get to.
+We add a nav link using a Rails link helper (the Rails way to add links).
+
+###Terminal
+
+rails routes
+(Before Rails 5.0, this command was...)
+rake routes
+
+###app/views/layouts/application.html.erb
+
+...
+<li><%= link_to "Contact Us", new_contact_path %></li>
+...
+
+###Terminal
+
+
+git add .
+
+git commit -m "Added nav link for contact page"
+
+git push origin contact_form

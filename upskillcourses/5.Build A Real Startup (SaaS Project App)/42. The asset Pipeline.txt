@@ -1,0 +1,2 @@
+We'll learn about how the asset pipeline feature of Rails optimizes your site.
+You need to read the Rails guides on the asset pipeline to learn how to configure it and do advanced techniques with it.

@@ -1,0 +1,11 @@
+click app
+model
+concers
+profile.rb
+
+new terminal
+cd saasapp/
+rails generate paperclip profile avatar
+rails db:migrate
+git add.
+git commit -m "Added avatar colum to profiles table"

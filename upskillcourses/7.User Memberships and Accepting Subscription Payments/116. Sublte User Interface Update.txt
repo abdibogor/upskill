@@ -1,0 +1,36 @@
+Here we add a subtle UI improvement so that users must always pick a membership plan upon signing up.
+
+We can do this by create a function that fires anytime the customer visits a registration form.
+
+
+###app/controllers/users/registrations_controller.rb
+...
+
+before_action :select_plan, only: :new
+
+...
+
+private
+  
+def select_plan
+    
+unless (params[:plan] == '1' || params[:plan] == '2')
+     
+ flash[:notice] = "Please select a membership plan to sign up."
+      
+redirect_to root_url
+    
+end
+  
+end
+
+...
+
+###Terminal
+
+
+git add .
+
+git commit -m "Added flash notice for selecting membership plan"
+
+git push origin user_memberships

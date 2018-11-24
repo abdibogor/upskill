@@ -1,0 +1,55 @@
+We need to install the Figaro gem to hide our Stripe API keys from Github and Heroku.
+
+We also load in our API keys from the Stripe dashboard.
+
+
+###Gemfile
+
+
+# Use Figaro for ENV variables
+
+gem 'figaro', '1.1.1'
+
+
+###Terminal
+
+
+bundle install
+
+bundle exec figaro install
+
+touch config/initializers/stripe.rb
+
+###config/initializers/stripe.rb
+
+
+Stripe.api_key = ENV["stripe_api_key"]
+
+STRIPE_PUBLIC_KEY = ENV["stripe_publishable_key"]
+
+###config/application.yml (Put your Stripe API keys in this file)
+...
+
+stripe_api_key: sk_test_6Wa4cw7hhDiS2oqGvRfqEscY
+
+stripe_publishable_key: pk_test_gj3DgfQoHLULuAvzZfrsFBfR
+
+#
+
+production:
+  
+	stripe_api_key: sk_test_6Wa4cw7hhDiS2oqGvRfqEscY
+  
+	stripe_publishable_key: pk_test_gj3DgfQoHLULuAvzZfrsFBfR
+
+###Terminal
+
+
+git add .
+
+git commit -m "Added stripe and figaro gems and api keys"
+
+git push origin user_memberships
+
+
+

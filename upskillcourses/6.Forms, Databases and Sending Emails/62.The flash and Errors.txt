@@ -1,0 +1,37 @@
+Here, we'll improve the detail of our error messages.
+
+We'll learn a bit about how the flash works.
+
+When objects don't validate, Rails automatically provides errors that can be accessed with the .errors method.
+
+###app/controllers/contacts_controller.rb
+...
+def create
+  @contact = Contact.new(contact_params)
+  if @contact.save
+     flash[:success] = "Message sent."
+     redirect_to new_contact_path
+  else
+     flash[:error] = @contact.errors.full_messages.join(", ")
+     redirect_to new_contact_path
+  end
+end
+...
+
+###app/views/contacts/new.html.erb
+
+
+...
+
+<%= flash[:error] %>
+
+...
+
+###Terminal
+git status
+
+git add .
+
+git commit -m "Improved error messages"
+
+git push origin contact_form

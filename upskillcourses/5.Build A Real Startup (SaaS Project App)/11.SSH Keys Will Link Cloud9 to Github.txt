@@ -1,0 +1,29 @@
+Our Cloud9 virtual computer (the IDE) contains a set of SSH keys - a long string of text and numbers that is unique to our computer.
+
+We'll copy and paste them to GitHub so that GitHub can identify and "talk to" our Cloud9 virtual computer.
+
+###Terminal
+
+
+cat ~/.ssh/id_rsa.pub
+
+Copy the output to your SSH keys page in your Github settings.
+
+
+We'll commence our first code deployment to GitHub where we will host a backup of our codebase.
+
+Remember that your GitHub account is sort of like a résumé for when you're seeking work opportunities.
+
+It is a site for hosting and sharing a copy of your raw code with collaborators and employers.
+
+###Terminal
+
+(Make sure you are in your application directory. Use the cd commands.)
+(Make sure you are in your application directory. Use the cd commands.)
+git remote add origin git@github.com:your_git_username/upskill_saas_tutorial.git
+
+git remote
+
+git remote -v
+
+git push origin master

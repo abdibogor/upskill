@@ -1,0 +1,29 @@
+Here, we update the HTML in our about.html.erb file.
+We also tweak the look of the brand name.
+
+<div class="container text-center">
+  <h1>About Page</h1>
+  <p>We are DevMatch. Our company focuses on creating an exclusive community
+  developers and entrepreneurs to meet.</p>
+</div>
+
+###app/assets/stylesheets/application.css.scss
+
+...
+.navbar-brand {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 800;
+}
+...
+
+###Terminal
+
+
+git status
+
+git add .
+
+git commit -m "Updated about page, and logo style"
+
+git push origin pages_and_layout
+

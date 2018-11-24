@@ -1,0 +1,23 @@
+We disable the Devise alert notices that obstruct our home page interface, using CSS.
+
+Since we're already showing different buttons conditionally, this keeps our interface simple.
+
+###app/assets/stylesheets/application.css.scss
+
+
+...
+.
+alert-notice {
+  
+display: none;
+
+}
+
+###Terminal
+git add .
+
+git commit -m "Hide devise flash messages"
+
+git push origin user_memberships
+
+

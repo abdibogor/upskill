@@ -1,0 +1,14 @@
+While this process sounds much more complicated than it actually is to implement, it is important that you understand the steps discussed here very carefully for integrating Stripe.
+
+Inspiration for this approach to using Stripe came from the Stripe documentation, as well as a blog post that Stripe links to by Larry Ullman (http://www.larryullman.com/series/processing-payments-with-stripe/). Additionally, the RailsCasts website by Ryan Bates provides helpful advice on billing with Stripe.
+
+###Requirements.txt
+Stripe Integration
+* Users should have a stripe customer token in the users table.
+* Javascript should prevent Pro form from submitting, when user fills it out,
+and should send card info to Stripe. Stripe will return with a card token.
+* Javascript should send user fields and card token to our rails app. Rails app
+should validate the user fields. Rails app will note whether plan 1 or plan 2.
+* Once validated, Rails should send user info (email, plan id) and card token
+to Stripe server and Stripe will create a subscription and send back customer
+token. Rails should save customer token and user information to our database.

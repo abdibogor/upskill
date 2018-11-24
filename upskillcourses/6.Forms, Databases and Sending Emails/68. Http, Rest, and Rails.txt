@@ -1,0 +1,62 @@
+Databases:
+- A place to permanently store information
+- Exist on servers/can communicate with a Rails application
+- Like spreadsheets with columns and rows
+- Accessible with languages like MySQL
+
+client Send http request
+server return http request
+
+"Client"
+web browser (software e.g Google chrome)
+
+Server
+Inside a server (hardware)
+
+Rest(Representational State Transfer)
+Refer to 'things' on the web as a 'Ressources'
+
+
+Four Things you can do with each resource
+- Create
+- Read(i.e. view it)
+- Update
+- Delete
+
+Example of an HTTP request
+Get / HTTP/1.1
+Host:facebook.com:80
+Accept: text/html
+Authorization: Basic
+Accept-Encoding: gzip
+
+(A bit like a digital text message being sent form a browser)
+
+An HTTP response
+HTTP/1.1 200 Ok
+Date: Mon, 05 Jan 2015 10:21:12 GMT
+SErver: Apache
+Content-Type: text/html
+
+<h1>Facebook</h1>
+<h2>Connect with friends</h2>
+
+Web server(software)
+e.g. Puma
+
+Web application(software)
+e.g. Ruby on Rails
+
+Common types of HTTP requests:			REST Actions
+- POST: for sending data to server(forms)	Create
+- Get: most common, for viewing web pages	READ
+- Put : to update data on server		Update
+- Delete: to destroy a ressource/data		DELETE
+
+
+Processing the HTTP request   Rails MVC
+web Server
+Router File
+Controller
+Model
+View

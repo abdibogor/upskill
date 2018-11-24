@@ -1,0 +1,19 @@
+puts 1 != 1
+puts 2 != 1
+
+clear
+
+puts player_x > player_y
+
+clear
+
+boolean1 = true
+boolean2 = false
+
+puts user_logged_in && user_premium
+puts true || false
+
+
+ruby pratice.rb
+
+ruby pratice.rb

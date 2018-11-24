@@ -1,0 +1,17 @@
+array_of_names = ["John", "Mary", "Joe"]
+
+array_of_names << "Jane"
+
+array_of_names.push("Tom")
+
+array_of_names.unshi("Adam")
+
+print array_of_names
+print "\n"
+
+array_of_names.shift
+
+puts array_of_names[1] 
+
+in bottom
+ruby pratice.rb

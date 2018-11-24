@@ -1,0 +1,27 @@
+We need to label our Pro form so that our upcoming Javascript code can target that form specifically.
+We also need to include the Stripe JS library and our Stripe public key somewhere on the site so that our Javascript can reference them.
+
+###app/views/devise/registrations/_pro_form.html.erb
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: {id: 'pro_form'}) do |f| %>
+...
+<%= f.submit "Sign up", class: 'btn btn-success', id: 'form-submit-btn' %>
+...
+
+###app/views/layouts/application.html.erb
+...
+<%= javascript_include_tag "https://js.stripe.com/v2/", type: 'text/javascript' %>
+
+...
+
+<%= tag :meta, :name => "stripe-key", :content => STRIPE_PUBLIC_KEY %>
+
+...
+
+###Terminal
+
+
+git add .
+
+git commit -m "Added Stripe JS library and pro form id"
+
+git push origin user_memberships

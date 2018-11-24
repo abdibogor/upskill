@@ -1,0 +1,7 @@
+step 7: Web server sends HTTP response
+step 6: Controller sends HTML to web server
+Step 5: Contacts New function runs
+step 4: Router processes request
+step 3: Web server talks to Rails
+step 2: Web server catches request
+step 1: Client Sends Get request

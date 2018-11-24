@@ -1,0 +1,30 @@
+We knock out the first requirement for our Stripe integration, by adding a customer token column to our Users table.
+
+###Terminal
+
+
+rails g migration AddStripeCustomerTokenToUsers
+
+###db/migrate/xyz123_add_stripe_customer_token_to_users.rb
+class AddStripeCustomerTokenToUsers < ActiveRecord::Migration[5.0]
+ 
+ def change
+   
+ add_column :users, :stripe_customer_token, :string
+  
+end
+
+end
+
+###Terminal
+
+
+
+rails db:migrate
+
+git add .
+
+git commit -m "Added stripe token to users table"
+
+git push origin user_memberships
+

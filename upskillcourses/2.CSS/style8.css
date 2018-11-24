@@ -1,0 +1,9 @@
+div {
+	 border: 1px solid black;
+	 border-radius: 20px 20px 0px;
+	 box-shadow: 4px 4px 10px 10px gray;
+}
+
+h1{
+	text-shadow: 4px 4px 10px blue;
+}

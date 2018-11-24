@@ -1,0 +1,5 @@
+Central Processing Unit
+Hard Disk Drive
+Ethernet Card
+Graphics/Audio Cards
+Ram(Random Access Memory) Chips

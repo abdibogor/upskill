@@ -1,0 +1,43 @@
+Git branch
+
+gem install
+
+We'll install a gem called Devise, which gives our site user authentication capabilities.
+
+First, we'll switch to a new branch using Git.
+
+###Terminal
+
+
+git checkout -b user_memberships
+
+###Gemfile
+
+
+...
+
+# Use Devise for user authentication
+gem 'devise', '4.2.0'
+
+...
+
+###Terminal
+bundle install
+
+rails generate devise:install
+
+rails generate devise User
+
+rails db:migrate
+
+(This command used to be rake db:migrate before Rails 5)
+
+rails g devise:views
+
+git add .
+
+git commit -m "Installed devise gem"
+
+(In the video, we push up the master branch, which is fine, but you should actually push up the user_memberships branch using the following command)
+git push origin user_memberships
+

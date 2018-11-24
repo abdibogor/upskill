@@ -1,0 +1,20 @@
+1.We'll learn a few linux commands, which are useful for controlling our Cloud9 virtual computer without using a mouse. Linux is not actually a language - technically speaking, it is a widely distributed family of software developed by Linus Torvalds. In our case Cloud9 is using a version of Linux which enables us to use these commands.
+2.We'll delete the default Rails app and create an empty workspace folder.
+3.In Cloud9, the Terminal refers to a folder called 'workspace' - this folder is identical to the folder name at the top of your file system.
+
+###Terminal
+cd
+rm -r workspace
+ls
+mkdir workspace
+cd workspace
+clear
+
+If you had trouble deleting the workspace folder, you can also try running the following commands.
+
+###Terminal
+cd
+rm -rf workspace
+mkdir workspace
+cd workspace
+ls

@@ -1,0 +1,34 @@
+We'll write a form with raw HTML.
+Then, we'll rewrite it using the built-in form helpers that Rails comes with.
+
+<div class="container">
+  
+<h3 class="text-center">Contact Us</h3>
+  
+<%= form_for "/contacts" do |f| %>
+   
+ <%= f.label :name %>
+    
+<%= f.text_field :name %>
+    
+<%= f.label :email %>
+    
+<%= f.text_field :email %>
+    
+<%= f.label :comments %>
+    
+<%= f.text_area :comments %>
+    
+<%= f.submit 'Submit' %>
+  
+<% end %>
+</div>
+
+###Terminal
+
+
+git add .
+
+git commit -m "Added form fileds"
+
+git push origin contact_form

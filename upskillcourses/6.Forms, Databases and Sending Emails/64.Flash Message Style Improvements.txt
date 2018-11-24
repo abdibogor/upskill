@@ -1,0 +1,44 @@
+bootstrap Alert
+
+
+We'll rewrite the flash display inside an Each loop.
+
+The Each loop, when used with flash, allows us to use two temporary variables - 
+we'll call them 'type' and 'msg', since we can name them whatever we want.
+We'll output a div using the Rails content_tag function inside the loop.
+
+By doing all of this, we have a dynamically generated flash message with dynamically generated CSS classes applied.
+
+Dynamic is a buzzword used to say the content was computed instead of hard-coded by hand.
+
+####app/views/layouts/application.html.erb
+
+...
+
+<% flash.each do |type, msg| %>
+ 
+ <%= content_tag :div, msg, class: "alert alert-#{type}" %>
+
+<% end %>
+
+...
+
+###app/controllers/contacts_controller.rb
+...
+
+flash[:danger] = @contact.errors.full_messages.join(", ")
+
+...
+
+###Terminal
+git status
+
+git add .
+
+git commit -m "Improved flash style"
+
+git push origin contact_form
+
+
+
+

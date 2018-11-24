@@ -1,0 +1,46 @@
+Many sites have an About page for describing what a company does.
+
+Here we'll add a page, the Rails way.
+
+###app/controllers/pages_controller.rb
+
+
+...
+
+def about
+end
+
+...
+
+###Terminal
+
+
+touch app/views/pages/about.html.erb
+
+###app/views/pages/about.html.erb
+
+
+<h2>About Page</h2>
+
+###config/routes.rb
+
+...
+get 'about', to: 'pages#about'
+...
+
+###app/views/layouts/application.html.erb
+
+
+...
+
+<link href="//fonts.googleapis.com/css?family=Open+Sans:400,700,800" rel="stylesheet">
+
+...
+
+###Terminal
+
+git status
+git add .
+git commit -m "Added about view, route, controller action"
+git push origin pages_and_layout
+

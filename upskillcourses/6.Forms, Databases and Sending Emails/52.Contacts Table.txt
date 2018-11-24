@@ -1,0 +1,31 @@
+We'll learn the role and importance of databases in web applications (persitence).
+We'll also create a database table for our upcoming contact form feature.
+
+###Terminal
+
+
+bundle exec rails generate migration CreateContacts
+
+
+###db/migrate/xyz_create_contacts.rb
+class CreateContacts < ActiveRecord::Migration[5.0]
+  def change
+    create_table :contacts do |t|
+      t.string :name
+      t.string :email
+      t.text :comments
+      t.timestamps
+    end
+  end
+end
+
+###Terminal
+rails db:migrate
+
+git status
+
+git add .
+
+git commit -m "Created contacts table"
+
+git push origin contact_form

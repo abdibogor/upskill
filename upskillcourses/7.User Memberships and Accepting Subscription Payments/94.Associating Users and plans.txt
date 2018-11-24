@@ -1,0 +1,53 @@
+Here, we'll learn how to associate plans and users programmatically.
+We create associations to make it easy to connect an object from one class to an object of another class.
+We also create the association using a concept called Relational Databases.
+
+###app/models/plan.rb
+
+
+class Plan < ActiveRecord::Base
+  
+has_many :users
+
+end
+
+###app/models/user.rb
+
+
+...
+
+belongs_to :plan
+
+...
+
+###Terminal
+
+
+rails g migration AddPlanToUser
+
+###db/migrate/xyz_add_plan_to_user.rb
+
+
+class AddPlanToUser < ActiveRecord::Migration[5.0]
+  
+def change
+    
+add_column :users, :plan_id, :integer
+  
+end
+
+end
+
+###Terminal
+
+
+rails db:migrate
+git 
+add .
+
+git commit -m "Added association for plans and users"
+
+git push origin user_memberships
+
+
+

@@ -1,0 +1,23 @@
+def say-hello
+	puts "Hello, World!"
+	puts "Hello I'm a computer"
+end
+
+say-hello 
+
+clear(backspace)
+
+def power(base, exponent)
+	result = 1
+	/*exponent.times do*/
+	3.times do
+		result = 2 * 2
+	  result = result * base
+end
+ result
+
+end
+puts power(2, 3)  || This function will computer 2 * 2 *2
+
+in bottom
+ruby pratice.rb

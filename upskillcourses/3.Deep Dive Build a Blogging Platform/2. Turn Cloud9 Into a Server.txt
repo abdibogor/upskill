@@ -1,0 +1,4 @@
+$ Cd workspace/
+$ rails server -b $IP -p $PORT
+3. in click Preview
+

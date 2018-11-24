@@ -1,0 +1,9 @@
+git-scm.com
+
+1.git config --global user.name "Rob dey"
+2.git config --global user.email bogoreh_bogoreh@outlook.com
+3. cd saasapp
+4.c9 README.md
+5.git init
+6. (master) git add
+7. (master) git status On branch master

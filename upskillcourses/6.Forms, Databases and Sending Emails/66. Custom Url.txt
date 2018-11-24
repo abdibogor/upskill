@@ -1,0 +1,21 @@
+We can create custom URLs in the routes file with ease.
+
+The key takeaway is that you should point the custom path name to the appropriate controller and action.
+
+###config/routes.rb
+...
+
+get 'contact-us', to: 'contacts#new'
+
+...
+
+###Terminal
+
+
+git status
+
+git add .
+
+git commit -m "Added custom contact form path"
+
+git push origin contact_form

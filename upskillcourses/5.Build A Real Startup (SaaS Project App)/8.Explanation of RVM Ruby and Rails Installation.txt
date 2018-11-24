@@ -1,0 +1,5 @@
+1. rvm install 2.3.0
+2. rvm gemset create saasapp
+3. rvm --default use ruby-2.3.0@saasapp
+4. gem install rails -v 5.0.0 --no-rdoc
+5. ruby -v

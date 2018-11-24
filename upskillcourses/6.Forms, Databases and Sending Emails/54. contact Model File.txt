@@ -1,0 +1,26 @@
+We'll create a model file for our contact form.
+
+The model file is for creating a blueprint for our contact form objects.
+
+This is our first taste of how object-oriented programming works in Rails.
+
+###Terminal
+
+
+touch app/models/contact.rb
+
+###app/models/contact.rb
+
+
+class Contact < ActiveRecord::Base
+
+end
+
+###Terminal
+git status
+
+git add .
+
+git commit -m "Added contact model file"
+
+git push origin contact_form

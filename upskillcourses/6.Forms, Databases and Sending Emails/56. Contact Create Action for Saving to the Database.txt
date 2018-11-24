@@ -1,0 +1,50 @@
+We'll reach a milestone by learning how to save forms to a database, programatically.
+We'll also add a Rails flash notice to our layout file.
+Then, we'll use the rails console command to view what is inside our database.
+
+###app/controllers/contacts_controller.rb
+...
+def new
+  @contact = Contact.new
+end
+def create
+  @contact = Contact.new(contact_params)
+  if @contact.save
+     redirect_to new_contact_path, notice: "Message sent."
+  else
+     redirect_to new_contact_path, notice: "Error occured."
+  end
+end
+private
+  def contact_params
+     params.require(:contact).permit(:name, :email, :comments)
+  end
+...
+
+###app/views/contacts/new.html.erb
+...
+<%= flash[:notice] %>
+...
+
+To view what is inside our database...
+
+###Terminal
+
+
+rails console
+
+> Contact.all
+
+> exit
+
+Then wrap up by saving and deploying a Git commit.
+###Terminal
+
+git status
+
+git add .
+
+git commit -m "Added contact create action to save to db"
+
+git push origin contact_form
+

@@ -1,0 +1,28 @@
+To complete the association between users and profiles, we need to add code to both model files.
+
+Remember to look up the Rails guides on how associations can be created in your code.
+
+###Terminal
+
+
+touch app/models/profile.rb
+
+###app/models/profile.rb
+
+
+class Profile < ActiveRecord::Base
+  
+belongs_to :user
+
+end
+
+
+###app/models/user.rb
+
+
+has_one :profile
+
+###Terminal
+git add .
+git commit -m "Added profile and user associations"
+git push origin user_profiles

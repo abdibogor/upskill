@@ -1,0 +1,26 @@
+Let's rewrite the navigation links using Rails link helpers.
+
+This gives us a solid understanding of how link_to tags in Rails are synonymous with anchor tags written HTML.
+
+We use link_to helpers as a best practice because they keep our code more modular.
+
+...
+
+<div class="nav navbar-nav navbar-right">
+  
+<%= link_to "Log In", new_user_session_path, class: "btn btn-default navbar-btn" %>
+  
+<%= link_to "Sign Up", new_user_registration_path, class: "btn btn-default navbar-btn" %>
+</div>
+
+...
+
+
+###Terminal
+
+
+git add .
+
+git commit -m "Updated nav links to helpers"
+
+git push origin user_memberships

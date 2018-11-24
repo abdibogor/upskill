@@ -1,0 +1,36 @@
+Twitter Bootstrap (getbootstrap.com) or bootstrap cdn
+We'll cover the importance and benefit of using a CSS and JS framework like Bootstrap.
+
+A best practice for adding Bootstrap to Rails is by adding a gem to our app.
+
+Adding it this way will ensure it is added to our site optimally, in terms of speed and functionality.
+
+###Gemfile
+
+
+...
+
+# Use Twitter Bootstrap library for front-end UI and layout
+
+gem 'bootstrap-sass', '3.3.7'
+
+...
+
+We renamed our application.css file to application.css.scss
+
+###app/assets/stylesheets/application.css.scss
+
+
+@import 'bootstrap-sprockets';
+
+@import 'bootstrap';
+
+###app/views/layouts/application.html.erb
+
+
+<div class="container">
+  
+<%= yield %>
+
+</div>
+

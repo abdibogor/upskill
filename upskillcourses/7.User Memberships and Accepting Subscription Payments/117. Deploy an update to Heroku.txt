@@ -1,0 +1,25 @@
+Now we get to see the latest version of our site in all it's glory!
+We'll deploy our latest code to our production site at Heroku.
+
+###Terminal
+git checkout master
+
+git merge user_memberships
+
+git status
+
+git push origin master
+
+git push heroku master
+
+heroku run rails db:migrate
+
+heroku run rails db:seed
+
+(Add your own Stripe keys at Heroku)
+
+heroku config:set stripe_api_key=sk_test_xyz123...
+
+heroku config:set stripe_publishable_key=pk_test_xyz123...
+
+heroku domains

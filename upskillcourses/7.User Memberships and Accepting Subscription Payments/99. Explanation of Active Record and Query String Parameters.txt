@@ -1,0 +1,21 @@
+Now we learn how to catch or access information passed through a parameter.
+
+Remember, the two ways you can access parameters is either via POST data (from a form) or via query strings in the URL.
+
+###app/views/devise/registrations/new.html.erb
+<% if params[:plan] == '2' %>
+  
+	<h2>Pro Account Sign Up Form</h2>
+
+	<% else %>
+  
+<h2>Basic Account Sign Up Form</h2>
+
+<% end %>
+
+###Terminal
+git add .
+
+git commit -m "Added conditional logic on sign up form"
+
+git push origin user_memberships

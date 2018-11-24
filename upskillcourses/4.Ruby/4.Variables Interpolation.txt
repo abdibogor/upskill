@@ -1,0 +1,17 @@
+name_1 = "John"
+
+name_1 = "Mary"
+
+puts name_1
+
+ruby pratice.rb
+
+name = "john"
+
+puts "Hellow, my name is #{name} "
+
+puts "Hellow.length
+
+puts "hi there".capitalize
+
+

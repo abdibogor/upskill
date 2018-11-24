@@ -1,0 +1,53 @@
+We contain the gradient to just show behind the main home page callout, and the nav bar.
+
+We have to rearrange the container div to do so.
+
+We learn to use the inspector tool for trying out changes.
+
+###app/views/pages/home.html.erb
+
+
+<div class="home-callout text-center container-fluid">
+  
+<h1>Welcome to DevMatch</h1>
+  
+<h3>A membership site where entrepreneurs can meet developers.</h3>
+
+</div>
+
+###app/views/layouts/application.html.erb
+
+
+...
+
+<%= yield %>
+
+###app/assets/stylesheets/application.css.scss
+...
+.
+navbar, .home-callout {
+
+...
+.
+home-callout {
+  
+color: white;
+ 
+ margin-top: -20px;
+  
+padding-top: 50px;
+  
+padding-bottom: 100px;
+
+}
+
+###Terminal
+
+
+git status
+
+git add .
+
+git commit -m "Modified home callout CSS"
+
+git push origin pages_and_layout

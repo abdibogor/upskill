@@ -1,0 +1,23 @@
+Nested routes are useful when you want URLs for associated objects, like users and their profiles.
+We can map out all of the routes we need for user profiles by adding a simple chunk of code.
+
+###config/routes.rb
+...
+
+resources :users do
+  
+resource :profile
+
+end
+
+...
+
+
+###Terminal
+
+
+git add .
+
+git commit -m "Added routes for user profiles"
+
+git push origin user_profiles

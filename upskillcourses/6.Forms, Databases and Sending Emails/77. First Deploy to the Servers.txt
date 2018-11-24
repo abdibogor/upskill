@@ -1,0 +1,17 @@
+We should deploy a copy of our site to Heroku, before configuring the server to also send emails.
+
+We need to merge our code from the contact_form branch into our master branch first.
+
+###Terminal
+
+git checkout master
+
+git branch
+
+git merge contact_form
+
+git push origin master
+
+git push heroku master
+
+heroku run rails db:migrate

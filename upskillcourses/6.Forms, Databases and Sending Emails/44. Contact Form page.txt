@@ -1,0 +1,59 @@
+We'll create a new branch with Git, since it makes sense to add our new contact form feature in it's own separate branch.
+Just as we did with our home and about pages, we will add a blank contact form page.
+To add pages in Rails, we need to add code to a controller, a view file, and the routes file.
+First, we merge our latest code from the pages_and_layout branch into the master branch. Then we create a new branch called contact_form, by branching off of the now-updated master so that contact_form also contains the latest version of our site.
+
+###Terminal
+
+
+git branch
+
+git checkout master
+
+git merge pages_and_layout
+
+git checkout -b conact_form
+
+Then, we create the files we need to have a blank contact form page.
+
+###Terminal
+
+touch app/controllers/contacts_controller.rb
+
+mkdir app/views/contacts
+
+touch app/views/contacts/new.html.erb
+
+###app/controllers/contacts_controller.rb
+
+
+class ContactsController < ApplicationController
+  
+	def new
+  
+    end
+
+end
+
+###app/views/contacts/new.html.erb
+
+
+<h1>Contact Form</h1>
+
+###config/routes.rb
+
+
+...
+
+resources :contacts
+
+...
+
+###Terminal
+
+
+git add .
+
+git commit -m "Added contact form view, route, controller"
+
+git push origin contact_form

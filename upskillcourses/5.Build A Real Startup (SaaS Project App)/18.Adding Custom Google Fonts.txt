@@ -1,0 +1,28 @@
+write in engine
+google fonts
+
+We'll learn how to import custom fonts from Google.
+
+###app/views/layouts/application.html.erb
+
+...
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,800" rel="stylesheet">
+
+###app/assets/stylesheets/application.css
+
+
+h1, h2, h3 {
+    font-family: 'Open Sans', sans-serif;
+}
+
+###Terminal
+
+
+git status
+
+git add .
+
+git commit -m "Added custom Google fonts"
+
+git push origin pages_and_layout
+

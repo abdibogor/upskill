@@ -1,0 +1,89 @@
+Let's complete the payment processing by creating a monthly subscription.
+
+We have to tell Rails only to do this for Pro account user sign-ups.
+
+
+First, we whitelist the form fields we are willing to accept into our Rails server.
+
+###app/controllers/application_controller.rb (In the video, the word "permitted" is misspelled in the function name - you should use the correct spelling below. Since this is a function name, we can name it whatever we want, spelled correctly or not, and it will still work, as long as it is spelled consistently everywhere it is used in the code.)
+
+...
+
+before_action :configure_permitted_parameters, if: :devise_controller?
+
+protected
+  
+	def configure_permitted_parameters
+    
+devise_parameter_sanitizer.permit(:sign_up) { |u| u.permit(:stripe_card_token, :email, :password, :password_confirmation) }
+  
+end
+
+...
+
+We tell the Router that we want to customize Devise's normal user registration process.
+
+###config/routes.rb
+...
+
+devise_for :users, controllers: { registrations: 'users/registrations' }
+
+...
+
+###Terminal
+
+
+mkdir app/controllers/users
+
+touch app/controllers/users/registrations_controller.rb
+
+We extend Devise so that Pro account users get a special sign up process called "save_with_payment".
+
+###app/controllers/users/registrations_controller.rb
+class Users::RegistrationsController < Devise::RegistrationsController
+  def create
+    super do |resource|
+      if params[:plan]
+        resource.plan_id = params[:plan]
+        if resource.plan_id == 2
+          resource.save_with_subscription
+        else
+          resource.save
+        end
+      end
+    end
+  end
+end
+
+We write the special registration process for Pro users, which entails calling Stripe's server to setup a monthly subscription for our new user, if their form fields are valid.
+
+###app/models/user.rb
+...
+attr_accessor :stripe_card_token
+def save_with_subscription
+  if valid?
+    customer = Stripe::Customer.create(description: email, plan: plan_id, card: stripe_card_token)
+    self.stripe_customer_token = customer.id
+    save!
+  end
+end
+...
+
+We fix an easily overlooked typo in the Javascript file.
+
+###app/assets/javascripts/users.js
+
+...
+var submitBtn = $('#form-signup-btn');
+...
+
+###Terminal
+
+
+git add .
+git commit -m "Added server side code for creating subscriptions for pro users"
+
+git push origin user_memberships
+
+
+

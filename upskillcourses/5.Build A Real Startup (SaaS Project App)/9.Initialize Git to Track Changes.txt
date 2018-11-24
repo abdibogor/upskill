@@ -1,0 +1,6 @@
+1.git config --global user.name "Rob dey"
+2.git config --global user.email bogoreh_bogoreh@outlook.com
+3.c9 README.md
+4.git init
+5. (master) git add
+6. 

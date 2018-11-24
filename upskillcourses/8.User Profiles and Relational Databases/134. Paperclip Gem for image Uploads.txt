@@ -1,0 +1,13 @@
+write in search engine 
+gem paperclip
+
+
+cd saasapp/
+sudo apt-get update
+sudo apt-get install imagemagick
+
+
+in tip 
+# Use Paperclip for image upload
+gem 'paperclip', '4.3.6'
+identify

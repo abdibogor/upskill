@@ -1,0 +1,13 @@
+HTML CSS are for presentation Only.
+Scripting Languages allow us to add actual functionality
+
+Front-End Languages
+HTML 5
+CSS 3
+Javascript
+
+Back-end Languages
+Php
+Python 
+Ruby Adds functionality(Scripting language)
+

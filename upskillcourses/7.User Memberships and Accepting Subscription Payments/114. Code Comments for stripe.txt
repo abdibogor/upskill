@@ -1,0 +1,16 @@
+application_config
+
+# Whitelist the following form fields so that we can process them, if coming form 
+# a Devise sign up form.
+
+
+
+registrations_controlers
+# Extend default Devise gem behavior so that
+# Users signing up with the Pro account (plan ID 2)
+# save with a special Stripe subscription function
+
+
+user.rb
+# if pro user posses validations (email, password, etc.)
+# then call stripe and tell stripe to set up a subscription

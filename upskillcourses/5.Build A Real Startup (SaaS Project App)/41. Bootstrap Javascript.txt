@@ -1,0 +1,34 @@
+https://github.com/twbs/bootstrap-sass
+
+We will update the mobile styles of the nav menu.
+
+We'll add Bootstrap's Javascript plugin, as per our bootstrap-sass gem instructions.
+
+###app/assets/stylesheets/application.css.scss
+
+...
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: white;
+}
+.navbar-default .navbar-toggle {
+  border: 2px solid white;
+  &:hover, &:focus {
+    background-color: #00c6ff;
+  }
+}
+...
+
+###app/assets/javascripts/application.js
+
+...
+//= require bootstrap-sprockets
+...
+
+###Terminal
+
+git status
+git add .
+git commit -m "Added bootstrap js and updated nav styles"
+git push origin pages_and_layout
+
+

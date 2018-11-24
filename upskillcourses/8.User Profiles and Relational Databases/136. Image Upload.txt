@@ -1,0 +1,6 @@
+new terminal
+cd saasapp/
+rails s -b IP -p $Port
+
+git add.
+git commit -m "Added file field for image upload to profile"

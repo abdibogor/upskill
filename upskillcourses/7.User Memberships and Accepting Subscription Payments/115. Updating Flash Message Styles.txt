@@ -1,0 +1,36 @@
+Now that our sign up process is fully built, we can bring back the flash messages and style them properly.
+We'll test out what we want to do using the inspector tool first, and then code the changes in to our CSS file.
+
+###app/assets/stylesheets/application.css.scss
+
+.flash-container {
+  position: absolute;
+  width: 100%;
+}
+.alert-notice, .alert-alert {
+  text-align: center;
+  background: rgba(255, 255, 255, 0.3);
+  border-color: rgba(255, 255, 255, 0.5);
+  margin-top: -14px;
+}
+
+
+###app/views/layouts/application.html.erb
+<div class="container flash-container">
+
+###Terminal
+
+
+touch app/assets/javascripts/pages.js
+
+###app/assets/javascripts/pages.js
+$(document).on('turbolinks:load', function(){
+  $('.alert').delay(1000).fadeOut(4000);
+});
+
+###Terminal
+git add .
+
+git commit -m "Updated flash message styles"
+
+git push origin user_memberships

@@ -1,0 +1,5 @@
+ruby -v
+$ touch pratice.rb
+$ ruby pratice.rb
+
+

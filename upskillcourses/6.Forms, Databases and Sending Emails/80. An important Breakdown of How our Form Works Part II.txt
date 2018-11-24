@@ -1,0 +1,9 @@
+Step 1: User submits form
+Step 2: Post request is sent to our server
+Step 3: Web server passes request to Rails
+Step 4: Router processes the Post request
+Step 5: Contacts#create action runs
+Step 6: Contacts#new action runs
+Step 7: HTTP response is sent back
+Step 8: Web browser renders HTML
+Step 9: 

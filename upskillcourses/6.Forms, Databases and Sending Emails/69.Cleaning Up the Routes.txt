@@ -1,0 +1,31 @@
+Ruby rails
+
+The Rails Guides web page for routing is a great way to dive deeper into how URLs and HTTP work in a Rails web app.
+
+The resources :contacts line of code in the routes file is overkill.
+
+We can simplify it by adding a bit of code to it.
+
+This way, our site only uses the URLs and routes that we need.
+
+Even though there are 4 main HTTP verbs: GET, POST, PUT, DELETE and 4 corresponding REST actions Read, Create, Update, Delete, Rails allows us to do 7 things with our resources (most of them are additional variations of GET/Read).
+
+###config/routes.rb
+...
+
+resources :contacts, only: :create
+
+get 'contact-us', to: 'contacts#new', as: 'new_contact'
+
+...
+
+###Terminal
+
+
+git status
+
+git add .
+
+git commit -m "Cleaned up contact form routes"
+
+git push origin contact_form

@@ -1,0 +1,17 @@
+Here, we'll update the Profiles controller to redirect the user not to the home page, but rather their profile page.
+We'll also learn how to display individual attributes of a user's profile on the profile page.
+We also use an if statement so that our Pro users.
+
+###app/controllers/profiles_controller.rb
+redirect_to user_path( params[:user_id] )
+
+###app/views/users/show.html.erb
+<%= @user.profile.first_name %> <%= @user.profile.last_name %>
+<%= @user.profile.job_title %>
+<% if current_user.plan_id == 2 %>
+<%= @user.profile.phone_number %>
+  
+<%= @user.profile.contact_email %>
+<% end %>
+
+<%= @user.profile.description %>

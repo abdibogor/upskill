@@ -1,0 +1,28 @@
+plataformatec/devise: flexible
+
+Now we'll use a useful method provided by devise called user_signed_in? within an if-statement.
+
+This allows us to conditionally display one set of buttons over another, depending on whether the user is logged in or not. 
+Gotta love if-statements!
+If-else logic is also known as Control Flow or Flow Control in computer science.
+
+<% if user_signed_in? %>
+  
+<%= link_to "Log Out", destroy_user_session_path, method: :delete, class: "btn btn-default navbar-btn" %>
+
+<% else %>
+  
+<%= link_to "Log In", new_user_session_path, class: "btn btn-default navbar-btn" %>
+  
+<%= link_to "Sign Up", new_user_registration_path, class: "btn btn-default navbar-btn" %>
+
+<% end %>
+
+###Terminal
+
+
+git add .
+
+git commit -m "Added conditional logout button"
+
+git push origin user_memberships

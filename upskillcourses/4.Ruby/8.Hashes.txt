@@ -1,0 +1,10 @@
+Hashed are used quite a bit in the Rails framework.
+
+array_of_names = [ "john", "Mary", "joe", 3, true, [3,4] ]
+
+hash_of_names = { :first_name = "john", :last_name = "Doe", :email = "abdirazak047@gmail.com"} 
+
+puts hash_of_names[:first_name]
+
+ruby pratice.rb
+

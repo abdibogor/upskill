@@ -1,0 +1,42 @@
+There are many third-party addon services that can be used to manage email sending.
+We'll rent the email servers from Mailgun.
+
+You will need to put a credit card on file, although you will never be charged unless you manually choose to upgrade your account.
+heroku addons:create mailgun:starter
+heroku domains
+
+###config/environment.rb
+
+...
+
+ActionMailer::Base.smtp_settings = {
+  
+:port           => ENV['MAILGUN_SMTP_PORT'],
+  
+:address        => ENV['MAILGUN_SMTP_SERVER'],
+  
+:user_name      => ENV['MAILGUN_SMTP_LOGIN'],
+  
+:password       => ENV['MAILGUN_SMTP_PASSWORD'],
+  
+:domain         => 'shrouded-fortress-66409.herokuapp.com',
+  
+:authentication => :plain,
+
+}
+
+ActionMailer::Base.delivery_method = :smtp
+
+...
+
+###Terminal
+
+
+git add .
+
+git commit -m "Added mailer settings to environment file"
+
+git push origin master
+
+git push heroku master
+

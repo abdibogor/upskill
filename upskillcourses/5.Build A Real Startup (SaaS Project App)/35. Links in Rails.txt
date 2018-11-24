@@ -1,0 +1,33 @@
+We'll learn about how to create links (HTML anchor tags) in Rails.
+
+We'll also learn how to use it with nested content for our logo and brand name.
+
+###app/views/layouts/application.html.erb
+
+
+...
+
+<%= link_to "/", class: "navbar-brand" do %>
+ 
+ <i class="fa fa-group"></i>
+  
+DevMatch
+
+<% end %>
+
+...
+
+<li><%= link_to "About", "/about" %></li>
+
+...
+
+###Terminal
+
+
+git status
+
+git add .
+
+git commit -m "Updated nav links using link_to"
+
+git push origin pages_and_layout

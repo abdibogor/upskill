@@ -1,0 +1,68 @@
+Let's carve out a plan for coding up the profiles.
+
+We need a controller for managing HTTP requests related to profiles.
+
+We'll also add a placeholder view file for the new action and a link to it on the home page.
+
+###Requirements.txt
+...
+
+User Profiles
+
+* Each user should have one profile
+
+* User should see link to new profile form upon signing up
+
+* User should be able to create and view their user profile
+
+* User profile should have a profile picture
+
+* User should be able to view all user profiles
+
+###Terminal
+
+
+touch app/controllers/profiles_controller.rb
+
+###app/controllers/profiles_controller.rb
+
+
+class ProfilesController < ApplicationController
+  
+# GET to /users/:user_id/profile/new
+ 
+ def new
+    
+# Render blank profile details form
+  
+end
+
+end
+
+###Terminal
+
+
+mkdir app/views/profiles
+
+touch app/views/profiles/new.html.erb
+
+
+###app/views/profiles/new.html.erb
+
+
+touch app/views/profiles/new.html.erb
+
+###app/views/pages/home.html.erb
+
+
+<%= link_to "Create your profile!", new_user_profile_path(user_id: current_user.id) if user_signed_in? %>
+
+###Terminal
+git add .
+
+git commit -m "Added profiles controller, new view, and link on homepage"
+
+git push origin user_profiles
+
+
+

@@ -1,0 +1,30 @@
+We'll use a powerful tool that comes with Rails called the console.
+
+We'll also see what objects look like in Rails and how to save them.
+
+Then, we'll learn how to view saved database records.
+
+###Terminal
+
+
+rails console --sandbox
+
+> Contact.new
+
+> @contact = Contact.new
+
+> @contact.name = "John Doe"
+
+> @contact.email = "john@example.com"
+
+> @contact
+
+> @contact.name
+
+> @contact.save
+
+> Contact.first
+
+> Contact.all
+
+> exit

@@ -1,0 +1,33 @@
+We'll add the optional Hirb gem to clean up our database output in the console.
+
+We'll give the gem a test run.
+
+###Gemfile
+
+...
+
+# Use Hirb gem for better console data presentation
+gem 'hirb', '0.7.3'
+
+...
+
+###Terminal
+
+bundle install
+
+rails console
+
+> Hirb.enable
+
+> Contact.all
+
+> exit
+
+git status
+
+git add .
+
+git commit -m "Added Hirb gem for data presentation"
+
+git push origin contact_form
+
